@@ -1,0 +1,37 @@
+    1  ls
+    2  cd boot
+    3  ls
+    4  cd ..
+    5  ln -sf /usr/share/zoneinfo/Europe/Vienna /etc/localtime
+    6  hwclock --systohc
+    7  nano /etc/locale.gen
+    8  vim /etc/locale.gen
+    9  vi /etc/locale.gen
+   10  pacman -Syyu
+   11  micor
+   12  pacman -S micro
+   13  micro /etc/pacman.d/mirrorlist
+   14  pacman -Syyu
+   15  pacman -Syyu
+   16  micro /etc/locale.gen
+   17  locale-gen
+   18  micro /etc/locale.conf
+   19  micro /etc/vconsole.conf
+   20  micro /etc/hostname
+   21  passwd
+   22  useradd -m -G sudo docker libvirt davfs2 -s /bin/bash pmarkus
+   23  useradd -m -G wheel docker libvirt davfs2 -s /bin/bash pmarkus
+   24  ls
+   25  cd home
+   26  ls
+   27  cd ..
+   28  useradd -m -s /bin/bash pmarkus
+   29  usermod -a -G wheel pmarkus
+   30  history
+   31  ls
+   32  cd /home
+   33  ls
+   34  mkdir log
+   35  ls
+   36  cd log
+   37  history >> cmds.txt

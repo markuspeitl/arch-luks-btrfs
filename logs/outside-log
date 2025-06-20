@@ -1,0 +1,16 @@
+  114  ls
+  115  pacman -Syyu
+  116  vim /etc/pacman.d/mirrorlist
+  117  pacman -Syyu
+  118  pacstrap -K /mnt base linux-firmware
+  119  cd mnt
+  120  ls
+  121  ls boot
+  122  cd boot
+  123  ls
+  124  cd ..
+  125  cd efi
+  126  ls
+  127  history
+  128  genfstab -U /mnt >> /mnt/etc/fstab
+  129  arch-chroot /mnt
