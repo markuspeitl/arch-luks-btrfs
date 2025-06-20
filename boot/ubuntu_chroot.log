@@ -1,0 +1,59 @@
+    1  add-apt-repository universe
+    2  ls
+    3  uname -r
+    4  cat /etc/*-release
+    5  apt update
+    6  ping de.archive.ubuntu.com
+    7  ip addr
+    8  ping google.com
+    9  ping 8.8.8.8
+   10  apt update
+   11  apt install micro
+   12  echo "erazer" > /etc/hostname
+   13  dpkg-reconfigure tzdata
+   14  echo 'nameserver 8.8.8.8' > /etc/resolv.conf
+   15  ping google.com
+   16  apt update
+   17  apt upgrade
+   18  dpkg-reconfigure tzdata
+   19  apt install debconf
+   20  echo $PATH
+   21  ls /usr/local/bin | grep dpkg-reconf
+   22  ls /usr/local/sbin | grep dpkg-reconf
+   23  ls /sbin | grep dpkg-reconf
+   24  export PATH=$PATH:/sbin
+   25  dpkg-reconfigure tzdata
+   26  dpkg-reconfigure locales
+   27  dpkg-reconfigure keyboard-configuration
+   28  setupcon
+   29  passwd
+   30  useradd -h
+   31  useradd --create-home /home/pmarkus --groups sudo pmarkus
+   32  useradd --create-home --groups sudo pmarkus
+   33  passwd pmarkus
+   34  groups pmarkus
+   35  apt install btrfs-progs
+   36  ls
+   37  mkdir -p /arch && mount -o ssd,compress=zstd:2,subvol=arch /dev/mapper/luks /arch
+   38  ls
+   39  cd arch
+   40  ls
+   41  cd ..
+   42  cat /etc/fstab
+   43  cp /arch/etc/fstab /etc/fstab
+   44  micro /etc/fstab
+   45  apt install micro
+   46  micro /etc/fstab
+   47  cd /boot
+   48  ls
+   49  cd loader
+   50  ls
+   51  cd entries
+   52  cp arch.conf kubuntu.conf
+   53  micro kubuntu.conf
+   54  cp kubuntu.conf /efi/loader/entries
+   55  reboot
+   56  exit
+   57  history
+   58  history > /home/logs/ubuntu_chroot.log
+   59  history > /boot/ubuntu_chroot.log

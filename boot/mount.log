@@ -1,0 +1,16 @@
+    7  ls
+    8  cd boot
+    9  ls
+   10  ls
+   11  cd ..
+   12  cd efi
+   13  lsblk
+   14  loadkeys de-latin1-nodeadkeys
+   15  lsblk
+   16  cryptsetup luksOpen /dev/sda3 luks
+   17  mount -o ssd,compress=zstd:2,subvolume=/arch /dev/mapper/luks /mnt
+   18  mount -o ssd,compress=zstd:2,subvol=/arch /dev/mapper/luks /mnt
+   19  mount /dev/sda1 /mnt/efi
+   20  mount /dev/sda2 /mnt/boot
+   21  arch-chroot /mnt
+   22  history

@@ -1,0 +1,20 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+
+# /dev/sda1
+UUID=B9A6-E666      	/efi      	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sda2 LABEL=BOOT
+UUID=814188ca-ea4a-4436-8387-2b5c2cad9dac	/boot     	ext4      	rw,relatime,stripe=8191	0 2
+
+# /dev/mapper/dat LABEL=sam_4tb_990
+# UUID=6d723549-6545-4c01-bcf4-5e900bc13522	/         	btrfs     	rw,relatime,compress=zstd:5,ssd,space_cache=v2,subvol=/	0 0
+
+# /dev/mapper/dat LABEL=sam_4tb_990
+# UUID=6d723549-6545-4c01-bcf4-5e900bc13522	/	btrfs	rw,relatime,compress=zstd:2,ssd,space_cache=v2,subvol=/arch	0 0
+UUID=6d723549-6545-4c01-bcf4-5e900bc13522	/	btrfs	rw,relatime,compress=zstd:2,ssd,subvol=/arch	0 1
+
+UUID=6d723549-6545-4c01-bcf4-5e900bc13522	/home/pmarkus	btrfs	rw,relatime,compress=zstd:5,ssd,subvol=pmarkus	0 2
+

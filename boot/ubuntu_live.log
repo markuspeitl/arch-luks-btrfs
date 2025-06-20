@@ -1,0 +1,477 @@
+    1  ls
+    2  cd boot
+    3  ls
+    4  cd ..
+    5  ln -sf /usr/share/zoneinfo/Europe/Vienna /etc/localtime
+    6  hwclock --systohc
+    7  nano /etc/locale.gen
+    8  vim /etc/locale.gen
+    9  vi /etc/locale.gen
+   10  pacman -Syyu
+   11  micor
+   12  pacman -S micro
+   13  micro /etc/pacman.d/mirrorlist
+   14  pacman -Syyu
+   15  pacman -Syyu
+   16  micro /etc/locale.gen
+   17  locale-gen
+   18  micro /etc/locale.conf
+   19  micro /etc/vconsole.conf
+   20  micro /etc/hostname
+   21  passwd
+   22  useradd -m -G sudo docker libvirt davfs2 -s /bin/bash pmarkus
+   23  useradd -m -G wheel docker libvirt davfs2 -s /bin/bash pmarkus
+   24  ls
+   25  cd home
+   26  ls
+   27  cd ..
+   28  useradd -m -s /bin/bash pmarkus
+   29  usermod -a -G wheel pmarkus
+   30  history
+   31  ls
+   32  cd /home
+   33  ls
+   34  mkdir log
+   35  ls
+   36  cd log
+   37  history >> cmds.txt
+   38  ls
+   39  cat cmds.txt
+   40  pacman -Syu intel-ucode
+   41  cd /
+   42  pacman -Syu intel-ucode
+   43  micro /etc/mkinitcpio.conf
+   44  pacman -Syu mkinicpio
+   45  pacman -Syu mkinitcpio
+   46  uname -r
+   47  ls
+   48  pacman -S linux linux-headers
+   49  pacman -S btrfs-progs
+   50  pacman -S dosfstools e2fsprogs ntfs-3g intel-ucode alsa-utils micro man-db man-pages
+   51  history > cmds.txt
+   52  ls
+   53  cd boot
+   54  ls
+   55  cd ..
+   56  micro /etc/mkinitcpio.conf
+   57  micro /etc/mkinitcpio.conf
+   58  micro /etc/vconsole.conf
+   59  micro /etc/vconsole.conf
+   60  localectl set-keymap --no-convert de-latin1-nodeadkeys
+   61  micro /etc/mkinitcpio.conf
+   62  micro /etc/mkinitcpio.conf
+   63  micro /etc/mkinitcpio.conf
+   64  ls /usr/share/kbd/keymaps | grep de
+   65  ls /usr/share/kbd/keymaps
+   66  localectl list
+   67  localectl set-keymap de-latin1-nodeadkeys
+   68  loadkeys de-latin1-nodeadkeys
+   69  micro /etc/mkinitcpio.conf
+   70  micro /etc/mkinitcpio.conf
+   71  pacman -S systemd
+   72  micro /etc/mkinitcpio.conf
+   73  pacman -S linux-lts linux-lts-headers
+   74  pacman -S systemd-cryptsetup-generator
+   75  micro /etc/fstab
+   76  pacstrap / sudo bash-completion
+   77  blkid -s UUID -o value /dev/mapper/dat /home/log/luk_dev_id
+   78  blkid -s UUID -o value /dev/mapper/dat > /home/log/luk_dev_id
+   79  blkid -s UUID -o value /dev/sda > /home/log/luk_dev_id
+   80  blkid -s UUID -o value /dev/mapper/dat > /home/log/luk_dev_id
+   81  blkid -s UUID -o value /dev/sda > /home/log/sda_id
+   82  blkid -s UUID -o value /dev/sda1 > /home/log/sda1_id
+   83  blkid -s UUID -o value /dev/sda2 > /home/log/sda1_id
+   84  blkid -s UUID -o value /dev/sda1 > /home/log/sda1_id
+   85  blkid -s UUID -o value /dev/sda2 > /home/log/sda2_id
+   86  blkid -s UUID -o value /dev/sda3 > /home/log/sda3_id
+   87  blkid -s UUID -o value /dev/sda3
+   88  blkid -s UUID -o value /dev/sda2
+   89  blkid -s UUID -o value /dev/sda1
+   90  blkid -s UUID -o value /dev/sda
+   91  micro /etc/fstab
+   92  bootctl install
+   93  systemctl enable systemd-boot-update.service
+   94  ls
+   95  options -h
+   96  options
+   97  micro /etc/crypttab
+   98  systemctl enable NetworkManager
+   99  micro /etc/mkinitcpio.conf
+  100  micro /etc/kernel/cmdline
+  101  micro /etc/mkinitcpio.d/linux-lts.preset
+  102  chmod 700 /boot
+  103  bootctl --path=/boot install
+  104  bootctl --path=/efi install
+  105  chmod 700 /efi/loader/random-seed
+  106  mkinitcpio -P
+  107  pacman -S tree
+  108  tree /efi
+  109  bootctl --esp-path /efi --boot-path/boot install
+  110  bootctl --esp-path=/efi --boot-path=/boot install
+  111  chmod 700 /efi/loader/random-seed
+  112  micro /etc/mkinitcpio.d/linux-lts.preset
+  113  tree /efi
+  114  find /efi -iname "bootx64"
+  115  find /efi -iname "*bootx64"
+  116  find /efi -iname "*bootx64*"
+  117  micro /etc/mkinitcpio.d/linux-lts.preset
+  118  find /efi -iname "*bootx64*" > tmp/boo
+  119  cat tmp/boo >> /etc/mkinitcpio.d/linux-lts.preset
+  120  micro /etc/mkinitcpio.d/linux-lts.preset
+  121  mkinitcpio -P
+  122  micro /boot/loader/loader.conf
+  123  micro /boot/loader/entries/arch.conf
+  124  blkid -s UUID -o value /dev/sda3
+  125  blkid -s UUID -o value /dev/sda1
+  126  blkid -s UUID -o value /dev/sda2
+  127  lsblk
+  128  blkid -s UUID -o value /dev/mapper/dat
+  129  blkid -s UUID -o value /dev/sda
+  130  blkid
+  131  blkid -s UUID -o value /dev/sda3 >> /boot/loader/entries/arch.conf
+  132  micro /boot/loader/entries/arch.conf
+  133  ls
+  134  cd boot
+  135  ls
+  136  ls EFI
+  137  tree EFI
+  138  ls /efi
+  139  tree /efi
+  140  micro /boot/loader/entries/arch.conf
+  141  pacman -S tee
+  142  tee -a
+  143  history | tee -a /home/log/histlast
+  144  cat /home/log/histlast
+  145  shutdown now
+  146  exit
+  147  ls
+  148  cd boot
+  149  ls
+  150  cd ..
+  151  cd efi
+  152  ls
+  153  cd loader
+  154  ls
+  155  micro loader.conf
+  156  ls
+  157  cd keys
+  158  ls
+  159  cd ..
+  160  ls
+  161  tree
+  162  cd ..
+  163  tree
+  164  cd ..
+  165  cd boot
+  166  ls
+  167  cd loader
+  168  ls
+  169  tree entries
+  170  micro entries.srel
+  171  ls
+  172  cd ..
+  173  cd ..
+  174  cp -rap /boot/loader/* /efi/loader
+  175  ls
+  176  rm -rf /boot/loader
+  177  ls
+  178  cd boot
+  179  ls
+  180  exit
+  181  ls
+  182  cd efi
+  183  ls
+  184  cd EFI
+  185  ls
+  186  cd ..
+  187  tree
+  188  cat loader/loader.conf
+  189  ls
+  190  cd ..
+  191  cd ..
+  192  cd /boot
+  193  ls
+  194  cp -a /boot/initramfs* /efi
+  195  cp -a /boot/vmlinuz* /efi
+  196  tree /efi
+  197  history > /home/log/migrate_efi.log
+  198  cat /home/log/migrate_efi.log
+  199  ls
+  200  micro /efi/loader/entries/arch.conf
+  201  cd /efi
+  202  ls
+  203  cd /boot
+  204  ls
+  205  cp -a /boot/intel-ucode.img /efi
+  206  exit
+  207  ls
+  208  cat cmds.txt
+  209  mv cmds.txt /boot
+  210  ls
+  211  cd boot
+  212  ls
+  213  cd /
+  214  boot install --boot-path=/boot --esp-path=/efi
+  215  bootctl install --boot-path=/boot --esp-path=/efi
+  216  chmod 700 /efi/loader/random-seed
+  217  ls
+  218  cd boot
+  219  ls
+  220  cd loader
+  221  ls
+  222  cd entries
+  223  ls
+  224  cp -ap /efi/loader/* ../../loader
+  225  ls
+  226  cd ..
+  227  ls
+  228  vim /etc/kernel/cmdline
+  229  ls
+  230  cd /
+  231  ls
+  232  vim /etc/kernel/cmdline
+  233  micor /etc/kernel/cmdlin
+  234  micro /etc/kernel/cmdlin
+  235  micro /etc/kernel/cmdline
+  236  cd /
+  237  ls
+  238  micro /efi/loader/entries/arch.conf
+  239  micro /boot/loader/entries/arch.conf
+  240  micro /efi/loader/entries/arch.conf
+  241  micro /boot/loader/entries/arch.conf
+  242  micro /efi/loader/entries/arch.conf
+  243  micro /boot/loader/entries/arch.conf
+  244  lsblk
+  245  blkid
+  246  reboot
+  247  exit
+  248  ls
+  249  micro /etc/kernel/cmdline
+  250  rm /etc/kernel/cmdline
+  251  cd /efi
+  252  ls
+  253  cd loader
+  254  ls
+  255  micro loader.conf
+  256  ls
+  257  cd entries
+  258  ls
+  259  pwd
+  260  micro arch.conf
+  261  ls
+  262  cat arch.conf  >> arch-default.conf
+  263  micro arch-default.conf
+  264  ls
+  265  cp -a ./* /boot/loader/entries
+  266  ls
+  267  cat arch.conf
+  268  micro /etc/fstab
+  269  reboot
+  270  exit
+  271  micro /etc/mkinitcpio.conf
+  272  mkinitcpio -P
+  273  ls
+  274  cd boot
+  275  ls
+  276  micro /etc/mkinitcpio.d/linux-lts.preset
+  277  micro /etc/mkinitcpio.d/linux-lts.preset
+  278  micro /etc/mkinitcpio.d/linux.preset
+  279  ls
+  280  cp -a loader /home/log/systemloader
+  281  cp -ra loader /home/log/systemloader
+  282  history | grep boot
+  283  bootctl install --boot-path=/boot --esp-path=/efi
+  284  bootctl install --boot-path=/boot --esp-path=/efi
+  285  mkinitcpio -P
+  286  micro /boot/loader/entries/arch.conf
+  287  micro /boot/loader/entries/arch-default.conf
+  288  bootctl update
+  289  bootctl
+  290  micro /efi/loader/entries/arch.conf
+  291  micro /efi/loader/entries/arch-default.conf
+  292  bootctl
+  293  ls /efi
+  294  micro /efi/loader/entries/arch.conf
+  295  bootctl
+  296  bootctl
+  297  micro /efi/loader/entries/arch.conf
+  298  ls -al /boot
+  299  ls -al /
+  300  cp -ap /boot/init* /efi
+  301  cp -ap /boot/vml* /efi
+  302  reboot now
+  303  exit
+  304  ls
+  305  ls
+  306  ls
+  307  cd /
+  308  ls
+  309  ls efi
+  310  ls boot
+  311  pacman -S git
+  312  pacman -Syuu
+  313  ping google.com
+  314  ip link
+  315  ping 8.8.8.8
+  316  ping 192.168.0.1
+  317  ping 127.0.0.1
+  318  ping www.example.com
+  319  ip link
+  320  ip link set enps0 up
+  321  ip link set enp1s0 up
+  322  ip link
+  323  ping 127.0.0.1
+  324  ping www.example.com
+  325  ping 8.8.8.8
+  326  systemctl enable systemd-networkd
+  327  systemctl start systemd-networkd
+  328  ip link
+  329  ping example.com
+  330  ping 8.8.8.8
+  331  networkctl list
+  332  ip addr
+  333  networkctl status enp1s0
+  334  micro /etc/systemd/network/20-wired.network
+  335  systemctl restart systemd-networkd
+  336  networkctl list
+  337  ip addr
+  338  ping 8.8.8.8
+  339  ping google.com
+  340  pacman -Syu
+  341  pacman -S systemd-resolved
+  342  micro /etc/systemd/resolved.conf
+  343  systemctl restart systemd-networkd
+  344  ping google.com
+  345  systemctl restart systemd-resolved
+  346  ping google.com
+  347  pacman -Syu
+  348  history /home/log/network-conf.log
+  349  history >> /home/log/network-conf.log
+  350  cat /home/log/network-conf.log
+  351  pacman -S git
+  352  locale
+  353  echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+  354  micro /etc/locale.gen
+  355  locale-gen
+  356  locale
+  357  echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+  358  micro /etc/locale.conf
+  359  unset LANG
+  360  source /etc/profile.d/locale.sh
+  361  pacman -S git
+  362  btrfs subvolume list
+  363  btrfs subvolume list /
+  364  micro /etc/fstab
+  365  mount /home/pmarkus
+  366  systemctl daemon-reload
+  367  mount /home/pmarkus
+  368  ls
+  369  cd /home/pmarkus
+  370  ls
+  371  su pmarkus
+  372  su - pmarkus
+  373  passwd pmarkus
+  374  su - pmarkus
+  375  visudo
+  376  pacman -S sudo
+  377  visudo
+  378  pacman -S vi
+  379  visudo
+  380  micro /etc/sudoers
+  381  usermod -aG sudo pmarkus
+  382  sudo -ll
+  383  EDITOR=micro visudo
+  384  sudo -ll
+  385  usermod -aG sudo pmarkus
+  386  EDITOR=micro visudo
+  387  groupadd sudo
+  388  usermod -aG sudo pmarkus
+  389  su - pmarkus
+  390  cd /home/pmarkus/arch-luks-btrfs
+  391  git add -A
+  392  git config --global --add safe.directory /home/pmarkus/arch-luks-btrfs
+  393  git config --global --user "office@markuspeitl.com"
+  394  git config --global user.name "Markus Peitl"
+  395  git config --global user.email "office@markuspeitl.com"
+  396  git add -A
+  397  git commit -am "Initial Commit"
+  398  git push
+  399  git push
+  400  git push
+  401  git remote -v
+  402  ssh-add /home/pmarkus/.ssh/markus_git_rsa
+  403  shutdown
+  404  ls
+  405  netcat
+  406  neofetch
+  407  ping google.com
+  408  ip addr
+  409  micro /etc/systemd/network/20-wired.network
+  410  systemctl restart systemd-networkd
+  411  ping google.com
+  412  systemctl
+  413  systemctl daemon-reload
+  414  ip addr
+  415  history | grep up
+  416  link set enp4s0 up
+  417  ip link set enp4s0 up
+  418  ping google.com
+  419  ping 8.8.8.8
+  420  ip addr
+  421  reboot
+  422  ls
+  423  cd /
+  424  ls
+  425  lsblk
+  426  mount -o ssd,compress=zstd:3,subvol=kubuntu /dev/mapper/luks /mnt
+  427  mount /dev/sda1 /mnt/efi
+  428  lsblk
+  429  mkdir -p /mnt/efi && mount /dev/sda1 /mnt/efi
+  430  mkdir -p /mnt/boot && mount /dev/sda2 /mnt/boot
+  431  pacman -S debootstrap
+  432  pacman -Syuu
+  433  ping google.com
+  434  history | grep netw
+  435  systemctl restart systemd-networkd systemd-resolvd
+  436  systemctl restart systemd-networkd systemd-resolved
+  437  networkctl status enp1s0
+  438  ping google.com
+  439  ip addr
+  440  ping 8.8.8.8
+  441  ip link set enp4s0 up
+  442  ip link set enp1s0 up
+  443  ping 8.8.8.8
+  444  micro /etc/systemd/network/20-wired.network
+  445  micro /etc/systemd/network/20-wired.network
+  446  systemctl restart systemd-networkd systemd-resolved
+  447  systemctl daemon-reload
+  448  ip link set enp1s0 up
+  449  ip addr
+  450  ping google.com
+  451  pacman -S debootstrap
+  452  cd /mnt
+  453  ls
+  454  debootstrap -h
+  455  debootstrap --help
+  456  debootstrap noble /mnt http://de.archive.ubuntu.com/ubuntu
+  457  loadkeys de-latin1
+  458  ls boot
+  459  tar -I 'zstd -7' -cf /home/pmarkus/boot_backup_20_06_25.tar.zst /boot
+  460  tar -I 'zstd -7' -cf /home/pmarkus/efi_backup_20_06_25.tar.zst /efi
+  461  tar-tf /home/pmarkus/efi_backup_20_06_25.tar.zst
+  462  tar -tf /home/pmarkus/efi_backup_20_06_25.tar.zst
+  463  tar -tf /home/pmarkus/boot_backup_20_06_25.tar.zst
+  464  micro /mnt/etc/apt/preferences.d/ignored-packages
+  465  micro /mnt/etc/sources.list
+  466  ls
+  467  cd /mnt/etc
+  468  ls
+  469  cd apt
+  470  ls
+  471  micro sources.list
+  472* pac
+  473  pacman -S arch-install-scripts
+  474  arch-chroot /mnt
+  475  history
+  476  arch-chroot /mnt
+  477  history > /mnt/boot/ubuntu_live.log
