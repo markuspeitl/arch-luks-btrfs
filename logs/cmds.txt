@@ -35,3 +35,17 @@
    35  ls
    36  cd log
    37  history >> cmds.txt
+   38  ls
+   39  cat cmds.txt
+   40  pacman -Syu intel-ucode
+   41  cd /
+   42  pacman -Syu intel-ucode
+   43  micro /etc/mkinitcpio.conf
+   44  pacman -Syu mkinicpio
+   45  pacman -Syu mkinitcpio
+   46  uname -r
+   47  ls
+   48  pacman -S linux linux-headers
+   49  pacman -S btrfs-progs
+   50  pacman -S dosfstools e2fsprogs ntfs-3g intel-ucode alsa-utils micro man-db man-pages
+   51  history > cmds.txt

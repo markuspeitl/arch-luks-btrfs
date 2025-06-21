@@ -1,6 +1,6 @@
-history > "$USER_history.log"
+history > "logs/$USER_history.log"
 cp -ap /etc/fstab etc/fstab
-cp -ap /etc/mkinitcpio.conf etc/mkinitcpio.conf
+cp -ap /etc/mkinitcpio* etc/
 
 cp -rap /boot/loader/* boot/loader
 cp -rap /efi/loader/* efi/loader
