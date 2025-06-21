@@ -20,3 +20,6 @@ UUID=6d723549-6545-4c01-bcf4-5e900bc13522	/	btrfs	rw,relatime,compress=zstd:2,ss
 
 UUID=6d723549-6545-4c01-bcf4-5e900bc13522	/home/pmarkus	btrfs	rw,relatime,compress=zstd:5,ssd,subvol=pmarkus	0 2
 
+UUID=6d723549-6545-4c01-bcf4-5e900bc13522	/kubuntu	btrfs	rw,relatime,compress=zstd:3,ssd,subvol=kubuntu	0 2
+UUID=B9A6-E666 /kubuntu/efi vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+UUID=26C7-7F53	/kubuntu/boot     	vfat      	rw,relatime	0 2
