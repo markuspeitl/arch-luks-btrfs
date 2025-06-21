@@ -12,3 +12,5 @@ cp -rap /efi/loader/* "$SCRIPT_D/efi/loader"
 
 cp -ap /etc/fstab "$SCRIPT_D/etc/fstab"
 cp -ap /etc/mkinitcpio* "$SCRIPT_D/etc/"
+
+git restore efi/loader/random-seed
