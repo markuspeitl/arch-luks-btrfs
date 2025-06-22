@@ -1,12 +1,12 @@
 # mkinitcpio preset file for the 'linux-lts' package
 
-# ALL_config="/etc/mkinitcpio.conf"
-ALL_kver="/boot/arch/vmlinuz-linux"
+ALL_config="/etc/mkinitcpio-nvidia.conf"
+ALL_kver="/boot/arch/vmlinuz-linux-lts"
 
 PRESETS=('default')
 
-default_config="/etc/mkinitcpio.conf"
-default_image="/boot/arch/initramfs-linux.img"
+default_config="/etc/mkinitcpio-nvidia.conf"
+default_image="/boot/nvidia/initramfs-linux-lts.img"
 # default_uki="/efi/EFI/Linux/arch-linux-lts.efi"
 # default_options="--splash /usr/share/systemd/bootctl/splash-arch.bmp"
 
