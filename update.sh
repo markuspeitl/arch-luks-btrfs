@@ -18,13 +18,21 @@ cp -apr /etc/mkinitcpio* "$SCRIPT_D/etc/"
 PWD=$(pwd)
 
 function mktouch(){
-	mkdir -p $(dirname "$SCRIPT_D/$1")
-	touch "$SCRIPT_D/$1"
+
+	echo "mktouch $1"
+	echo "mktouch target $SCRIPT_D$1"
+
+	mkdir -p $(dirname "$SCRIPT_D$1")
+	touch "$SCRIPT_D$1"
 }
+export -f mktouch
 
-find /boot -iname "*.img" | xargs mktouch
-find /boot -iname "*.efi" | xargs mktouch
+find /boot -iname "*.img" | xargs -I@ bash -c "SCRIPT_D=$SCRIPT_D mktouch @"
+find /boot -iname "vmlinuz-linux*" | xargs -I@ bash -c "SCRIPT_D=$SCRIPT_D mktouch @"
+find /boot -iname "*.efi" | xargs -I@ bash -c "SCRIPT_D=$SCRIPT_D mktouch @"
 
+find /efi -iname "*.img" | xargs -I@ bash -c "SCRIPT_D=$SCRIPT_D mktouch @"
+find /efi -iname "*.efi" | xargs -I@ bash -c "SCRIPT_D=$SCRIPT_D mktouch @"
 
 #PWD=$(pwd)
 #cd /boot
@@ -37,7 +45,7 @@ find /boot -iname "*.efi" | xargs mktouch
 #cd "$PWD"
 
 
-mkdir -p $SCRIPT_D/etc/systemd/network
+mkdir -p "$SCRIPT_D/etc/systemd/network"
 cp /etc/systemd/network/* "$SCRIPT_D/etc/systemd/network"
 #sudo systemctl restart systemd-networkd.service
 #sudo systemctl restart systemd-daemon

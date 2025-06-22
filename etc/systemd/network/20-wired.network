@@ -1,0 +1,10 @@
+[Match]
+Name=eth0
+#Name=enp1s0
+
+[Link]
+RequiredForOnline=routable
+
+[Network]
+DHCP=yes
+DNS=8.8.8.8 8.8.4.4
